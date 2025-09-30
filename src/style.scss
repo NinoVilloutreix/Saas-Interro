@@ -1,0 +1,112 @@
+/* Rubik Variable Font Face */
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/Rubik/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+}
+
+// ====================================
+// Mini reset uniquement pour test
+// https://piccalil.li/blog/a-more-modern-css-reset/
+// ====================================
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// ====================================
+// Base
+// ====================================
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Rubik", sans-serif;
+
+  background-color: oklch(0.13 0.028 261.692);
+}
+
+// ====================================
+// Layout
+// ====================================
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+// ====================================
+// Components
+// ====================================
+
+.btn {
+  // Utilisation de variables CSS privée
+  --_bg: oklch(1 0 0);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 10ch;
+  min-height: 44px;
+  padding: 0.8em 3em;
+
+  color: oklch(0.3 0 0);
+  text-transform: uppercase;
+  line-height: 1rem;
+
+  background-color: var(--_bg, oklch(1 0 0));
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: oklch(1 0 0 / 0.5);
+}
+
+// Variants
+
+.btn--info {
+  --_bg: oklch(0.7584 0.1373 231.6);
+}
+.btn--success {
+  --_bg: oklch(0.7733 0.1523 163.3);
+}
+.btn--warning {
+  --_bg: oklch(0.8334 0.1641 83.87);
+}
+.btn--error {
+  --_bg: oklch(0.7123 0.1656 22.18);
+}
